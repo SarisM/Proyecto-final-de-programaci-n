@@ -1,5 +1,6 @@
 import {login} from "./session.js";
 //IMPORTAR DESDE LA OTRA CARPETA
+//session.js esta en la carpeta de crear cuenta 
 
 const render = () => {
     const loginForm= document.querySelector("#login");
@@ -13,8 +14,8 @@ const render = () => {
         try {
             login(correo, contraseña);
 //IR A MI MAIN                
-//ahora nos redirigimos a la landing             
-            window.location.href = "./landing.html";
+//ahora nos redirigimos a la main             
+            window.location.href = "./main.html";
         } catch (error) {
             alert(error.message);
         }

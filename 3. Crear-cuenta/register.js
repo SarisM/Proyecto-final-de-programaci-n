@@ -17,7 +17,7 @@ const render = () => {
             registrar(name, lastName, correo, contraseña, confirmarContraseña);
             alert("Usuario registrado exitosamente");
 //ahora nos redirigimos al login             
-            window.location.href = "./index.html";
+            window.location.href = "./login.html";
         } catch (error) {
             alert(error.message);
         }

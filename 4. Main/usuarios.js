@@ -4,7 +4,7 @@ const render = () => {
    const usuarioActivo = obtenerUsuarioEnSesion();
 //importante, si no esta con una cuenta de usuario no deberia poder ver nada
    if(!usuarioActivo) {
-    window.location.href = "./index.html";
+    window.location.href = "./login.html";
     return
    }
 
@@ -15,7 +15,7 @@ const render = () => {
    cerrarSesion.addEventListener("click", ()=> {
     alert("se clickea")
     logout ();
-    window.location.href = "./index.html"
+    window.location.href = "./login.html"
    });
 }
 
