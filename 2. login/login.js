@@ -1,26 +1,45 @@
-import {login} from "./session.js";
-//IMPORTAR DESDE LA OTRA CARPETA
-//session.js esta en la carpeta de crear cuenta 
+const USUARIOS_KEY = "usuarios";
+const USUARIOS_ACTIVO_KEY = "usuario-activo";
+
+const obtenerUsuarios = () => {
+  const usuarios = localStorage.getItem(USUARIOS_KEY);
+
+  if (!usuarios) {
+    return [];
+  }
+  return JSON.parse(usuarios);
+};
+
+const login = (correo, contraseña) => {
+  const usuarios = obtenerUsuarios();
+  for (const usuario of usuarios) {
+    if (usuario.correo === correo && usuario.contraseña === contraseña) {
+      localStorage.setItem(USUARIOS_ACTIVO_KEY, usuario.id);
+      return usuario;
+    }
+  }
+
+  throw new Error("Usuario y/o contraseña incorrectos");
+};
 
 const render = () => {
-    const loginForm= document.querySelector("#login");
+  const loginForm = document.querySelector("#login");
 
-    loginForm.addEventListener("submit", (e) => {
-        e.preventDefault(); 
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-        const correo = e.target.correo.value;
-        const contraseña = e.target.contraseña.value;
+    const correo = e.target.correo.value;
+    const contraseña = e.target.contraseña.value;
 
-        try {
-            login(correo, contraseña);
-//IR A MI MAIN                
-//ahora nos redirigimos a la main             
-            window.location.href = "./main.html";
-        } catch (error) {
-            alert(error.message);
-        }
-
-    });
+    try {
+      login(correo, contraseña);
+      //IR A MI MAIN
+      //ahora nos redirigimos a la main
+      window.location.href = "../4. Main/main.html";
+    } catch (error) {
+      alert(error.message);
+    }
+  });
 };
 
 document.addEventListener("DOMContentLoaded", render);

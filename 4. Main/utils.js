@@ -1,166 +1,165 @@
 export const obtenerProductos = async () => {
-	const response = await fetch('https://raw.githubusercontent.com/SarisM/Proyecto-final-de-programaci-n/main/Main/data.json')
-	const data = await response.json()
-	return data
+    const response = await fetch('https://raw.githubusercontent.com/SarisM/Proyecto-final-de-programaci-n/main/4.%20Main/data.json')
+    const data = await response.json()
+    return data
 }
 
-export class panaderia {
-	#id
-	img
-	name
-	price
-	#nodo
+export class Panaderia {
+    #id
+    img
+    name
+    price
 
-	constructor(id, img, name, price) {
-		this.#id = id
-		this.img = img
-		this.name = name
-		this.price = price
-		//this.#nodo = nodo;
-	}
+    constructor(id, img, name, price) {
+        this.#id = id
+        this.img = img
+        this.name = name
+        this.price = price
+    }
 
-	render() {
-		const block = document.createElement('div')
-		block.classList.add('block')
+    render() {
+        const block = document.createElement('div')
+        block.classList.add('block')
 
-		const block__innerblocks = document.createElement('div')
-		block__innerblocks.classList.add('block__innerblocks')
-		block.appendChild(block__innerblocks)
+        const blockInnerblocks = document.createElement('div')
+        blockInnerblocks.classList.add('block__innerblocks')
+        block.appendChild(blockInnerblocks)
 
-		const imgBlockInnerblocks = document.createElement('img')
-		imgBlockInnerblocks.src = this.img
-		imgBlockInnerblocks.alt = this.name
-		block__innerblocks.appendChild(imgBlockInnerblocks)
+        const imgBlockInnerblocks = document.createElement('img')
+        imgBlockInnerblocks.src = this.img
+        imgBlockInnerblocks.alt = this.name
+        blockInnerblocks.appendChild(imgBlockInnerblocks)
 
-		const bottomblock = document.createElement('div')
-		bottomblock.classList.add('block__bottomblock')
+        const bottomblock = document.createElement('div')
+        bottomblock.classList.add('block__bottomblock')
 
-		const title = document.createElement('p')
-		title.classList.add('block__bottomblock--letras')
-		title.textContent = this.name
-		bottomblock.appendChild(title)
+        const title = document.createElement('p')
+        title.classList.add('block__bottomblock--letras')
+        title.textContent = this.name
+        bottomblock.appendChild(title)
 
-		const priceElement = document.createElement('p')
-		priceElement.innerText = this.price
-		bottomblock.appendChild(priceElement)
+        const priceElement = document.createElement('p')
+        priceElement.innerText = this.price
+        bottomblock.appendChild(priceElement)
 
-		const button = document.createElement('button')
-		button.textContent = 'More'
-		button.classList.add('more')
-		bottomblock.appendChild(button)
+        const button = document.createElement('button')
+        button.textContent = 'More'
+        button.classList.add('more')
+        bottomblock.appendChild(button)
 
-		block.appendChild(bottomblock)
+        block.appendChild(bottomblock)
 
-		button.addEventListener('click', () => {
-		window.location.href = '../Description-page/description.html?id=' + this.#id
-	 })
-		return block
-	}
+        button.addEventListener('click', () => {
+            window.location.href = '../5. Description-page/description.html?id=' + this.#id
+        })
+
+        return block
+    }
 }
 
-export class brunch {
-	#id
-	img
-	name
-	price
-	#nodo
+export class Brunch {
+    #id
+    img
+    name
+    price
 
-	constructor(id, img, name, price) {
-		this.#id = id
-		this.img = img
-		this.name = name
-		this.price = price
-		//this.#nodo = nodo;
-	}
+    constructor(id, img, name, price) {
+        this.#id = id
+        this.img = img
+        this.name = name
+        this.price = price
+    }
 
-	render() {
-		const block = document.createElement('div')
-		block.classList.add('block')
+    render() {
+        const block = document.createElement('div')
+        block.classList.add('block')
 
-		const block__innerblocks = document.createElement('div')
-		block__innerblocks.classList.add('block__innerblocks')
-		block.appendChild(block__innerblocks)
+        const blockInnerblocks = document.createElement('div')
+        blockInnerblocks.classList.add('block__innerblocks')
+        block.appendChild(blockInnerblocks)
 
-		const imgBlockInnerblocks = document.createElement('img')
-		imgBlockInnerblocks.src = this.img
-		imgBlockInnerblocks.alt = this.name
-		block__innerblocks.appendChild(imgBlockInnerblocks)
+        const imgBlockInnerblocks = document.createElement('img')
+        imgBlockInnerblocks.src = this.img
+        imgBlockInnerblocks.alt = this.name
+        blockInnerblocks.appendChild(imgBlockInnerblocks)
 
-		const bottomblock = document.createElement('div')
-		bottomblock.classList.add('block__bottomblock')
+        const bottomblock = document.createElement('div')
+        bottomblock.classList.add('block__bottomblock')
 
-		const title = document.createElement('p')
-		title.classList.add('block__bottomblock--letras')
-		title.textContent = this.name
-		bottomblock.appendChild(title)
+        const title = document.createElement('p')
+        title.classList.add('block__bottomblock--letras')
+        title.textContent = this.name
+        bottomblock.appendChild(title)
 
-		const priceElement = document.createElement('p')
-		priceElement.innerText = this.price
-		bottomblock.appendChild(priceElement)
+        const priceElement = document.createElement('p')
+        priceElement.innerText = this.price
+        bottomblock.appendChild(priceElement)
 
-		const button = document.createElement('button')
-		button.textContent = 'More'
-		button.classList.add('more')
-		bottomblock.appendChild(button)
+        const button = document.createElement('button')
+        button.textContent = 'More'
+        button.classList.add('more')
+        bottomblock.appendChild(button)
 
-		block.appendChild(bottomblock)
-		button.addEventListener('click', () => {
-		window.location.href = '../Description-page/description.html?id=' + this.#id
-		 })
-		return block
-	}
+        block.appendChild(bottomblock)
+
+        button.addEventListener('click', () => {
+            window.location.href = '../5. Description-page/description.html?id=' + this.#id
+        })
+
+        return block
+    }
 }
 
-export class bebidasCaliente {
-	#id
-	img
-	name
-	price
-	#nodo
+export class BebidasCaliente {
+    #id
+    img
+    name
+    price
 
-	constructor(id, img, name, price) {
-		this.#id = id
-		this.img = img
-		this.name = name
-		this.price = price
-		//this.#nodo = nodo;
-	}
+    constructor(id, img, name, price) {
+        this.#id = id
+        this.img = img
+        this.name = name
+        this.price = price
+    }
 
-	render() {
-		const block = document.createElement('div')
-		block.classList.add('block')
+    render() {
+        const block = document.createElement('div')
+        block.classList.add('block')
 
-		const block__innerblocks = document.createElement('div')
-		block__innerblocks.classList.add('block__innerblocks')
-		block.appendChild(block__innerblocks)
+        const blockInnerblocks = document.createElement('div')
+        blockInnerblocks.classList.add('block__innerblocks')
+        block.appendChild(blockInnerblocks)
 
-		const imgBlockInnerblocks = document.createElement('img')
-		imgBlockInnerblocks.src = this.img
-		imgBlockInnerblocks.alt = this.name
-		block__innerblocks.appendChild(imgBlockInnerblocks)
+        const imgBlockInnerblocks = document.createElement('img')
+        imgBlockInnerblocks.src = this.img
+        imgBlockInnerblocks.alt = this.name
+        blockInnerblocks.appendChild(imgBlockInnerblocks)
 
-		const bottomblock = document.createElement('div')
-		bottomblock.classList.add('block__bottomblock')
+        const bottomblock = document.createElement('div')
+        bottomblock.classList.add('block__bottomblock')
 
-		const title = document.createElement('p')
-		title.classList.add('block__bottomblock--letras')
-		title.textContent = this.name
-		bottomblock.appendChild(title)
+        const title = document.createElement('p')
+        title.classList.add('block__bottomblock--letras')
+        title.textContent = this.name
+        bottomblock.appendChild(title)
 
-		const priceElement = document.createElement('p')
-		priceElement.innerText = this.price
-		bottomblock.appendChild(priceElement)
+        const priceElement = document.createElement('p')
+        priceElement.innerText = this.price
+        bottomblock.appendChild(priceElement)
 
-		const button = document.createElement('button')
-		button.textContent = 'More'
-		button.classList.add('more')
-		bottomblock.appendChild(button)
+        const button = document.createElement('button')
+        button.textContent = 'More'
+        button.classList.add('more')
+        bottomblock.appendChild(button)
 
-		block.appendChild(bottomblock)
-		button.addEventListener('click', () => {
-		window.location.href = '../Description-page/description.html?id=' + this.#id
-		 })
+        block.appendChild(bottomblock)
 
-		return block
-	}
+        button.addEventListener('click', () => {
+            console.log("Hola")
+            window.location.href = '../5. Description-page/description.html?id=' + this.#id
+        })
+
+        return block
+    }
 }
