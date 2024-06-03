@@ -413,7 +413,8 @@ box-shadow: -1px 1px 20px 6px rgba(219,203,175,1);
 }
 
 .innerblocks1 {
-    height: 50%;
+    height: 15rem;
+    width: 1rem;
     background-size: cover;
 
 }
@@ -466,4 +467,8 @@ box-shadow: -1px 1px 20px 6px rgba(219,203,175,1);
     height: 5vh;
     text-align: center;
     
+}
+
+.producto {
+    height: 15rem;
 }

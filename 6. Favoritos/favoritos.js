@@ -8,7 +8,7 @@ const renderFavoritos = () => {
   // Recorrer cada producto en favoritos y generar el HTML correspondiente
   favoritos.forEach((producto) => {
     const productoHTML = `
-        <div class="producto">
+        <div class="Producto">
           <img src="${producto.img}" alt="${producto.name}">
           <h3>${producto.name}</h3>
           <p>${producto.price}</p>
