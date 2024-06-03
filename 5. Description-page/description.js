@@ -18,15 +18,15 @@ class descripcionTarjeta {
   img;
   name;
   price;
-  descripcion;
+  description;
   #nodo;
 
-  constructor(id, img, name, price, descripcion) {
+  constructor(id, img, name, price, description) {
     this.#id = id;
     this.img = img;
     this.name = name;
     this.price = price;
-    this.descripcion = descripcion;
+    this.description = description;
     //this.#nodo = nodo;
   }
 
