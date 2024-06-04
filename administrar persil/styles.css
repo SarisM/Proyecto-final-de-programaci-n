@@ -3,20 +3,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    background-image: url(Fondo_Mesa\ de\ trabajo\ 1.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
+
 
 section.cuadrado {
     display: flex;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
+    background: #1e4b70;
+    padding: 2rem;
+    border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 80%;
 }
 
 section.izquierda, section.derecha {
-    padding: 20px;
+    padding: 1,2rem;
 }
 
 section.izquierda {
@@ -28,27 +32,30 @@ section.derecha {
 }
 
 h1.titulo, h1.derechap {
-    margin-bottom: 20px;
+    margin-bottom: 1,2rem;
+    color: white;
 }
 
 .medio .cuadrado1, .medio .cuadrado2 {
-    margin-bottom: 20px;
+    margin-bottom: 1,2rem;
 }
 
 .cuadritod {
-    margin-bottom: 10px;
+    margin-bottom: 1,2rem;
 }
 
 .texto, .texto1 {
     font-weight: bold;
+    color: white;
+
 }
 
 .info1 {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 0.5rem;
+    margin-top: 0.4rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
 }
 
 .botonchiqui {
@@ -57,14 +64,14 @@ h1.titulo, h1.derechap {
 }
 
 .peque {
-    background-color: #007bff;
+    background-color: #154069;
     color: white;
-    padding: 10px 15px;
+    padding: 0.6rem 1rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.4rem;
     cursor: pointer;
 }
 
 .peque:hover {
-    background-color: #0056b3;
+    background-color: #d3a500;
 }
