@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="cuadrado">
+        <section class="izquierda">
+            <cuadrito class="nada"></cuadrito>
+            <cuadrito class="infopeque">
+                <h1 class="derechap">Mi cuenta</h1>
+                <br/>
+            </cuadrito>
+        </section>
+
+        <section class="derecha">
+            <div class="arriba">
+                <h1 class="titulo">Mi cuenta</h1>
+            </div>
+
+            <div class="medio">
+                <cuadrado class="cuadrado1">
+                    <div class="cuadritod">
+                        <p class="texto">Nombre</p>
+                        <input class="info1" id="nombre" type="text" readonly>
+                    </div>
+                    <div class="cuadritod">
+                        <p class="texto">Apellido</p>
+                        <input class="info1" id="apellido" type="text" readonly>
+                    </div>
+                </cuadrado>
+
+                <cuadrado class="cuadrado2">
+                    <div class="cuadritod">
+                        <p class="texto">Correo</p>
+                        <input class="info1" id="correo" type="text" readonly>
+                    </div>
+                    <div class="cuadritod">
+                        <p class="texto">Contraseña</p>
+                        <input class="info1" id="contraseña" type="text" readonly>
+                    </div>
+                </cuadrado>
+            </div>
+
+            <div class="abajo">
+                <h1 class="titulo">Autenticación</h1>
+                <br/>
+                <p class="texto1">ID</p>
+                <p class="texto1" id="id">0111 1100 0111 1100</p>
+                <br/>
+                <div class="botonchiqui">
+                    <button id="logout" class="peque">Cerrar Sesión</button>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
