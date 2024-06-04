@@ -236,6 +236,38 @@ box-shadow: -4px 3px 55px -9px rgba(28,42,48,1);
   .producto:hover {
     transform: translateY(-5px);
   }
+
+  .bottomblock1 {
+    justify-content: center;
+    background-color: #4b6978;
+    height: 10rem;
+    width: 15rem;
+    color: white;
+  }
+
+  .img-detail {
+    height: 15rem;
+    width: 15rem;;
+  }
+
+  .div {
+    
+    justify-content: center;
+    background-color: #4b6978;
+    height: 25.5rem;
+    width: 15rem;
+    border-radius: 0.5rem;
+  }
+
+  .espacio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+
+
+  
   
 
  
