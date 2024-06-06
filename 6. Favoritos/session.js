@@ -2,6 +2,7 @@ const USUARIOS_KEY = "usuarios";
 const USUARIO_ACTIVO_KEY = "usuario-activo";
 
 const obtenerUsuarios = () => {
+    //Si hay usuarios almacenados los parsea y devuelve como un array de objetos
     const usuarios = localStorage.getItem(USUARIOS_KEY);
     return usuarios ? JSON.parse(usuarios) : [];
 };
@@ -15,11 +16,3 @@ export const obtenerUsuarioEnSesion = () => {
     return usuarios.find(usuario => usuario.id === parseInt(usuarioActivo)) || null;
 };
 
-export const actualizarUsuario = (usuarioActualizado) => {
-    const usuarios = obtenerUsuarios();
-    const index = usuarios.findIndex(usuario => usuario.id === usuarioActualizado.id);
-    if (index !== -1) {
-        usuarios[index] = usuarioActualizado;
-        localStorage.setItem(USUARIOS_KEY, JSON.stringify(usuarios));
-    }
-};

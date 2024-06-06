@@ -5,7 +5,7 @@ const render = () => {
 
   registro.addEventListener("submit", (e) => {
     e.preventDefault();
-
+    //Obtiener los valores de los campos del formulario
     const name = e.target.name.value;
     const lastName = e.target.lastName.value;
     const correo = e.target.correo.value;

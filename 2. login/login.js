@@ -33,7 +33,6 @@ const render = () => {
 
     try {
       login(correo, contraseña);
-      //IR A MI MAIN
       //ahora nos redirigimos a la main
       window.location.href = "../4. Main/main.html";
     } catch (error) {

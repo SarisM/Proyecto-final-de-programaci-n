@@ -10,15 +10,6 @@ const obtenerUsuarios = () => {
     return JSON.parse(usuarios);
 };
 
-// {
-//     id,
-//     correo,
-//     contraseña,
-//     favoritos,
-// }
-
-
-//vamos a crear errores, se escribe throw new error
 export const registrar = (name, lastName, correo, contraseña, confirmarContraseña) => {
     if(contraseña !== confirmarContraseña) {
         throw new Error("Las contraseñas no coinciden");

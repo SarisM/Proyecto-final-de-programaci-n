@@ -387,16 +387,6 @@ input{
     margin-top: 1%;
 }
 
-#productoextra{
-    background-image:url(./resources/producto2.png);
-    object-fit: contain;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    border-radius: 0.625rem 0.625rem 0 0;
-    background-position: 0 17.25rem;
-    /* border: solid; */
-}
 
 .block1 {
     /* border: solid; */
@@ -421,15 +411,15 @@ box-shadow: -1px 1px 20px 6px rgba(219,203,175,1);
 
 .bottomblock1 {
     border-radius: 0 0 0.625rem 0.625rem;
-    width: 100%;
-    height: 60%;
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
     gap: .3rem;
     padding: .5rem;
-    background-color: #2F4550
+    background-color: #2F4550;
+    height: 15rem;
+    width: 20rem;
     
 }
 
@@ -469,6 +459,25 @@ box-shadow: -1px 1px 20px 6px rgba(219,203,175,1);
     
 }
 
-.producto {
-    height: 15rem;
+
+.div-producto {
+    height: 25rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+}
+
+.innerblocks1 {
+    height: 20rem;
+    width: 21rem;
+}
+
+.block1 {
+    height: 20rem;
+    width: 20rem;
+}
+
+.img-detail {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 0.5rem;
 }

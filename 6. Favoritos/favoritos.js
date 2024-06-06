@@ -1,29 +1,3 @@
-// const renderFavoritos = () => {
-//   const favoritosDiv = document.querySelector("#campo1");
-//   favoritosDiv.innerHTML = ""; // Limpiar el contenido actual del div
-
-//   // Obtener productos favoritos del localStorage o inicializar como array vacío
-//   const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-
-//   // Recorrer cada producto en favoritos y generar el HTML correspondiente
-//   favoritos.forEach((producto) => {
-//     const productoHTML = `
-//         <div class="Producto">
-//           <img src="${producto.img}" alt="${producto.name}">
-//           <h3>${producto.name}</h3>
-//           <p>${producto.price}</p>
-//           <p>${producto.description}</p>
-//         </div>
-//       `;
-//     // Insertar el HTML del producto en el div de favoritos
-//     favoritosDiv.innerHTML += productoHTML;
-//   });
-// };
-
-// // Llamar a la función de renderizado de favoritos cuando se carga la página
-// document.addEventListener("DOMContentLoaded", renderFavoritos);
-
-
 import { obtenerUsuarioEnSesion } from './session.js';
 import { obtenerProductos } from './productos.js';
 
@@ -36,11 +10,13 @@ const renderFavoritos = async () => {
   }
 
   const productos = await obtenerProductos();
+  //Obtener los favoritos del usuario
   const favoritos = usuario.favoritos;
 
   const favoritosContainer = document.getElementById('favoritos');
   favoritosContainer.innerHTML = '';
 
+  //Verificar si hay productos favoritos
   if (favoritos.length === 0) {
     favoritosContainer.textContent = 'No tienes productos en tus favoritos.';
     return;
@@ -51,6 +27,7 @@ const renderFavoritos = async () => {
                      productos.brunch.find(p => p.id === favoritoId) ||
                      productos.bebidasCaliente.find(p => p.id === favoritoId);
 
+  //Crear y agregar el contenedor de cada producto favorito
     if (producto) {
       const container = document.createElement("div");
       container.classList.add("div");

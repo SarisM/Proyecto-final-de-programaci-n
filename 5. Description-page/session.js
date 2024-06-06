@@ -11,9 +11,12 @@ export const obtenerUsuarioEnSesion = () => {
     if (!usuarioActivo) {
         return null;
     }
+    //buscar en la lista de usuarios por ID y devuelver el usuario correspondiente
     const usuarios = obtenerUsuarios();
     return usuarios.find(usuario => usuario.id === parseInt(usuarioActivo)) || null;
 };
+
+//Encontrar el índice del usuario que se va a actualizar y reemplazar su información.
 
 export const actualizarUsuario = (usuarioActualizado) => {
     const usuarios = obtenerUsuarios();
